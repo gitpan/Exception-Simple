@@ -1,18 +1,11 @@
-#!/usr/bin/env perl
-
 use inc::Module::Install;
 
-use strict;
-use warnings;
+all_from('lib/Exception/Simple.pm');
 
-name           'Exception-Simple';
-all_from       'lib/Exception/Simple.pm';
-
-requires       'Moose' => '0.22';
-
-build_requires 'Test::More' => '0.47';
-build_requires 'Test::Exception' => '0.21';
+requires 'Carp';
+requires 'overload';
+test_requires 'Test::More';
+test_requires 'Test::Exception';
 
 auto_install;
 WriteAll;
-
