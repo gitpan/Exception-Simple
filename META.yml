@@ -3,12 +3,12 @@ abstract: 'simple exception class'
 author:
   - 'n0body <n0body@thisaintnews.com>'
 build_requires:
-  ExtUtils::MakeMaker: 6.36
+  ExtUtils::MakeMaker: 6.59
   Test::Exception: 0
   Test::More: 0
   parent: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.36
+  ExtUtils::MakeMaker: 6.59
 distribution_type: module
 dynamic_config: 1
 generated_by: 'Module::Install version 1.06'
@@ -23,8 +23,9 @@ no_index:
     - inc
     - t
 requires:
-  Carp: 0
   overload: 0
+  perl: 5.8.0
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.006
+  repository: https://github.com/n0body-/exception-simple.git
+version: 0.007
