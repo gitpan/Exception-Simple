@@ -1,7 +1,7 @@
 ---
 abstract: 'simple exception class'
 author:
-  - 'n0body <n0body@thisaintnews.com>'
+  - 'Mark Ellis <markellis@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.59
   Test::Exception: 0
@@ -26,7 +26,7 @@ requires:
   overload: 0
   perl: 5.8.0
 resources:
-  bugtracker: https://github.com/n0body-/exception-simple/issues
+  bugtracker: https://github.com/markwellis/exception-simple/issues
   license: http://dev.perl.org/licenses/
-  repository: https://github.com/n0body-/exception-simple.git
-version: 0.009
+  repository: https://github.com/markwellis/exception-simple.git
+version: 0.009001
