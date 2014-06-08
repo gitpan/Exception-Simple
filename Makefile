@@ -13,27 +13,27 @@
 
 #     ABSTRACT => q[simple exception class]
 #     AUTHOR => [q[Mark Ellis <markellis@cpan.org>]]
-#     BUILD_REQUIRES => { Test::Exception=>q[0], Test::More=>q[0], ExtUtils::MakeMaker=>q[6.59], parent=>q[0] }
+#     BUILD_REQUIRES => { Test::More=>q[0], parent=>q[0], Test::Exception=>q[0], ExtUtils::MakeMaker=>q[6.59] }
 #     CONFIGURE_REQUIRES => {  }
 #     DISTNAME => q[Exception-Simple]
 #     LICENSE => q[perl]
 #     MIN_PERL_VERSION => q[5.008]
 #     NAME => q[Exception::Simple]
 #     NO_META => q[1]
-#     PREREQ_PM => { Test::Exception=>q[0], ExtUtils::MakeMaker=>q[6.59], Test::More=>q[0], overload=>q[0], parent=>q[0] }
+#     PREREQ_PM => { parent=>q[0], Test::More=>q[0], ExtUtils::MakeMaker=>q[6.59], overload=>q[0], Test::Exception=>q[0] }
 #     TEST_REQUIRES => {  }
-#     VERSION => q[0.009001]
+#     VERSION => q[1.000000]
 #     VERSION_FROM => q[lib/Exception/Simple.pm]
 #     dist => { PREOP=>q[$(PERL) -I. "-MModule::Install::Admin" -e "dist_preop(q($(DISTVNAME)))"] }
 #     realclean => { FILES=>q[MYMETA.yml] }
-#     test => { TESTS=>q[t/exception-simple.t] }
+#     test => { TESTS=>q[t/0_use-ok.t t/1_exception-simple.t t/2_alias.t t/3_spelling.t t/4_changes.t] }
 
 # --- MakeMaker post_initialize section:
 
 
 # --- MakeMaker const_config section:
 
-# These definitions are from config.sh (via /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/5.18.2/x86_64-linux/Config.pm).
+# These definitions are from config.sh (via /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2/x86_64-linux/Config.pm).
 # They may have been overridden via Makefile.PL or on the command line.
 AR = ar
 CC = cc
@@ -46,14 +46,14 @@ FULL_AR = /usr/bin/ar
 LD = cc
 LDDLFLAGS = -shared -O2 -L/usr/local/lib -fstack-protector
 LDFLAGS =  -fstack-protector -L/usr/local/lib
-LIBC = /lib/libc-2.18.so
+LIBC = /lib/libc-2.19.so
 LIB_EXT = .a
 OBJ_EXT = .o
 OSNAME = linux
-OSVERS = 3.12.9-1-arch
+OSVERS = 3.13.6-1-arch
 RANLIB = :
-SITELIBEXP = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.2
-SITEARCHEXP = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.2/x86_64-linux
+SITELIBEXP = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2
+SITEARCHEXP = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/x86_64-linux
 SO = so
 VENDORARCHEXP = 
 VENDORLIBEXP = 
@@ -65,11 +65,11 @@ DIRFILESEP = /
 DFSEP = $(DIRFILESEP)
 NAME = Exception::Simple
 NAME_SYM = Exception_Simple
-VERSION = 0.009001
+VERSION = 1.000000
 VERSION_MACRO = VERSION
-VERSION_SYM = 0_009001
+VERSION_SYM = 1_000000
 DEFINE_VERSION = -D$(VERSION_MACRO)=\"$(VERSION)\"
-XS_VERSION = 0.009001
+XS_VERSION = 1.000000
 XS_VERSION_MACRO = XS_VERSION
 XS_DEFINE_VERSION = -D$(XS_VERSION_MACRO)=\"$(XS_VERSION)\"
 INST_ARCHLIB = blib/arch
@@ -83,55 +83,55 @@ MAN3EXT = 3
 INSTALLDIRS = site
 DESTDIR = 
 PREFIX = $(SITEPREFIX)
-PERLPREFIX = /home/mark/perl5/perlbrew/perls/perl-5.18.1
-SITEPREFIX = /home/mark/perl5/perlbrew/perls/perl-5.18.1
+PERLPREFIX = /home/mark/perl5/perlbrew/perls/perl-5.18.2
+SITEPREFIX = /home/mark/perl5/perlbrew/perls/perl-5.18.2
 VENDORPREFIX = 
-INSTALLPRIVLIB = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/5.18.2
+INSTALLPRIVLIB = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2
 DESTINSTALLPRIVLIB = $(DESTDIR)$(INSTALLPRIVLIB)
-INSTALLSITELIB = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.2
+INSTALLSITELIB = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2
 DESTINSTALLSITELIB = $(DESTDIR)$(INSTALLSITELIB)
 INSTALLVENDORLIB = 
 DESTINSTALLVENDORLIB = $(DESTDIR)$(INSTALLVENDORLIB)
-INSTALLARCHLIB = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/5.18.2/x86_64-linux
+INSTALLARCHLIB = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2/x86_64-linux
 DESTINSTALLARCHLIB = $(DESTDIR)$(INSTALLARCHLIB)
-INSTALLSITEARCH = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/site_perl/5.18.2/x86_64-linux
+INSTALLSITEARCH = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/site_perl/5.18.2/x86_64-linux
 DESTINSTALLSITEARCH = $(DESTDIR)$(INSTALLSITEARCH)
 INSTALLVENDORARCH = 
 DESTINSTALLVENDORARCH = $(DESTDIR)$(INSTALLVENDORARCH)
-INSTALLBIN = /home/mark/perl5/perlbrew/perls/perl-5.18.1/bin
+INSTALLBIN = /home/mark/perl5/perlbrew/perls/perl-5.18.2/bin
 DESTINSTALLBIN = $(DESTDIR)$(INSTALLBIN)
-INSTALLSITEBIN = /home/mark/perl5/perlbrew/perls/perl-5.18.1/bin
+INSTALLSITEBIN = /home/mark/perl5/perlbrew/perls/perl-5.18.2/bin
 DESTINSTALLSITEBIN = $(DESTDIR)$(INSTALLSITEBIN)
 INSTALLVENDORBIN = 
 DESTINSTALLVENDORBIN = $(DESTDIR)$(INSTALLVENDORBIN)
-INSTALLSCRIPT = /home/mark/perl5/perlbrew/perls/perl-5.18.1/bin
+INSTALLSCRIPT = /home/mark/perl5/perlbrew/perls/perl-5.18.2/bin
 DESTINSTALLSCRIPT = $(DESTDIR)$(INSTALLSCRIPT)
-INSTALLSITESCRIPT = /home/mark/perl5/perlbrew/perls/perl-5.18.1/bin
+INSTALLSITESCRIPT = /home/mark/perl5/perlbrew/perls/perl-5.18.2/bin
 DESTINSTALLSITESCRIPT = $(DESTDIR)$(INSTALLSITESCRIPT)
 INSTALLVENDORSCRIPT = 
 DESTINSTALLVENDORSCRIPT = $(DESTDIR)$(INSTALLVENDORSCRIPT)
-INSTALLMAN1DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.1/man/man1
+INSTALLMAN1DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.2/man/man1
 DESTINSTALLMAN1DIR = $(DESTDIR)$(INSTALLMAN1DIR)
-INSTALLSITEMAN1DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.1/man/man1
+INSTALLSITEMAN1DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.2/man/man1
 DESTINSTALLSITEMAN1DIR = $(DESTDIR)$(INSTALLSITEMAN1DIR)
 INSTALLVENDORMAN1DIR = 
 DESTINSTALLVENDORMAN1DIR = $(DESTDIR)$(INSTALLVENDORMAN1DIR)
-INSTALLMAN3DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.1/man/man3
+INSTALLMAN3DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.2/man/man3
 DESTINSTALLMAN3DIR = $(DESTDIR)$(INSTALLMAN3DIR)
-INSTALLSITEMAN3DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.1/man/man3
+INSTALLSITEMAN3DIR = /home/mark/perl5/perlbrew/perls/perl-5.18.2/man/man3
 DESTINSTALLSITEMAN3DIR = $(DESTDIR)$(INSTALLSITEMAN3DIR)
 INSTALLVENDORMAN3DIR = 
 DESTINSTALLVENDORMAN3DIR = $(DESTDIR)$(INSTALLVENDORMAN3DIR)
 PERL_LIB =
-PERL_ARCHLIB = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/5.18.2/x86_64-linux
+PERL_ARCHLIB = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2/x86_64-linux
 LIBPERL_A = libperl.a
 FIRST_MAKEFILE = Makefile
 MAKEFILE_OLD = Makefile.old
 MAKE_APERL_FILE = Makefile.aperl
 PERLMAINCC = $(CC)
-PERL_INC = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/5.18.2/x86_64-linux/CORE
-PERL = /home/mark/perl5/perlbrew/perls/perl-5.18.1/bin/perl "-Iinc"
-FULLPERL = /home/mark/perl5/perlbrew/perls/perl-5.18.1/bin/perl "-Iinc"
+PERL_INC = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2/x86_64-linux/CORE
+PERL = /home/mark/perl5/perlbrew/perls/perl-5.18.2/bin/perl "-Iinc"
+FULLPERL = /home/mark/perl5/perlbrew/perls/perl-5.18.2/bin/perl "-Iinc"
 ABSPERL = $(PERL)
 PERLRUN = $(PERL)
 FULLPERLRUN = $(FULLPERL)
@@ -144,7 +144,7 @@ PERM_DIR = 755
 PERM_RW = 644
 PERM_RWX = 755
 
-MAKEMAKER   = /home/mark/perl5/perlbrew/perls/perl-5.18.1/lib/5.18.2/ExtUtils/MakeMaker.pm
+MAKEMAKER   = /home/mark/perl5/perlbrew/perls/perl-5.18.2/lib/5.18.2/ExtUtils/MakeMaker.pm
 MM_VERSION  = 6.66
 MM_REVISION = 66600
 
@@ -263,7 +263,7 @@ RCS_LABEL = rcs -Nv$(VERSION_SYM): -q
 DIST_CP = best
 DIST_DEFAULT = tardist
 DISTNAME = Exception-Simple
-DISTVNAME = Exception-Simple-0.009001
+DISTVNAME = Exception-Simple-1.000000
 
 
 # --- MakeMaker macro section:
@@ -445,22 +445,22 @@ clean_subdirs :
 
 clean :: clean_subdirs
 	- $(RM_F) \
-	  mon.out core.[0-9][0-9][0-9][0-9][0-9] \
-	  core.[0-9][0-9][0-9][0-9] perl \
-	  perlmain.c $(BOOTSTRAP) \
-	  core.[0-9][0-9][0-9] $(BASEEXT).exp \
-	  perl$(EXE_EXT) pm_to_blib.ts \
-	  $(BASEEXT).def $(INST_ARCHAUTODIR)/extralibs.ld \
-	  core.*perl.*.? *$(OBJ_EXT) \
+	  core tmon.out \
+	  $(INST_ARCHAUTODIR)/extralibs.all mon.out \
+	  lib$(BASEEXT).def $(BASEEXT).def \
+	  $(MAKE_APERL_FILE) perl$(EXE_EXT) \
 	  MYMETA.yml so_locations \
-	  *perl.core pm_to_blib \
-	  core perl.exe \
-	  core.[0-9][0-9] $(INST_ARCHAUTODIR)/extralibs.all \
-	  *$(LIB_EXT) $(BASEEXT).bso \
-	  $(BASEEXT).x $(MAKE_APERL_FILE) \
-	  MYMETA.json tmon.out \
-	  core.[0-9] blibdirs.ts \
-	  lib$(BASEEXT).def 
+	  core.[0-9][0-9][0-9][0-9][0-9] pm_to_blib.ts \
+	  perl.exe $(BASEEXT).exp \
+	  core.[0-9][0-9][0-9][0-9] $(BOOTSTRAP) \
+	  *$(LIB_EXT) $(INST_ARCHAUTODIR)/extralibs.ld \
+	  $(BASEEXT).x perl \
+	  perlmain.c *perl.core \
+	  MYMETA.json *$(OBJ_EXT) \
+	  pm_to_blib core.*perl.*.? \
+	  core.[0-9] core.[0-9][0-9] \
+	  blibdirs.ts core.[0-9][0-9][0-9] \
+	  $(BASEEXT).bso 
 	- $(RM_RF) \
 	  blib 
 	- $(MV) $(FIRST_MAKEFILE) $(MAKEFILE_OLD) $(DEV_NULL)
@@ -477,7 +477,7 @@ realclean purge ::  clean realclean_subdirs
 	- $(RM_F) \
 	  $(MAKEFILE_OLD) $(FIRST_MAKEFILE) 
 	- $(RM_RF) \
-	  MYMETA.yml $(DISTVNAME) 
+	  $(DISTVNAME) MYMETA.yml 
 
 
 # --- MakeMaker metafile section:
@@ -732,7 +732,7 @@ $(FIRST_MAKEFILE) : Makefile.PL $(CONFIGDEP)
 
 # --- MakeMaker makeaperl section ---
 MAP_TARGET    = perl
-FULLPERL      = /home/mark/perl5/perlbrew/perls/perl-5.18.1/bin/perl
+FULLPERL      = /home/mark/perl5/perlbrew/perls/perl-5.18.2/bin/perl
 
 $(MAP_TARGET) :: static $(MAKE_APERL_FILE)
 	$(MAKE) $(USEMAKEFILE) $(MAKE_APERL_FILE) $@
@@ -750,7 +750,7 @@ $(MAKE_APERL_FILE) : $(FIRST_MAKEFILE) pm_to_blib
 TEST_VERBOSE=0
 TEST_TYPE=test_$(LINKTYPE)
 TEST_FILE = test.pl
-TEST_FILES = t/exception-simple.t
+TEST_FILES = t/0_use-ok.t t/1_exception-simple.t t/2_alias.t t/3_spelling.t t/4_changes.t
 TESTDB_SW = -d
 
 testdb :: testdb_$(LINKTYPE)
@@ -803,7 +803,7 @@ pm_to_blib : $(FIRST_MAKEFILE) $(TO_INST_PM)
 
 
 # End.
-# Postamble by Module::Install 1.06
+# Postamble by Module::Install 1.08
 # --- Module::Install::Admin::Makefile section:
 
 realclean purge ::

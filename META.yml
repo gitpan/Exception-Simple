@@ -11,7 +11,7 @@ configure_requires:
   ExtUtils::MakeMaker: 6.59
 distribution_type: module
 dynamic_config: 1
-generated_by: 'Module::Install version 1.06'
+generated_by: 'Module::Install version 1.08'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -29,4 +29,4 @@ resources:
   bugtracker: https://github.com/markwellis/exception-simple/issues
   license: http://dev.perl.org/licenses/
   repository: https://github.com/markwellis/exception-simple.git
-version: 0.009001
+version: '1.000000'
